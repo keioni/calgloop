@@ -1,0 +1,36 @@
+doctype html
+html(lang='ja')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        include layout/styles
+        title Main View - IoT System
+        link(rel='stylesheet', href='styles/main.css')
+        link(rel='stylesheet', href='styles/gadgets.css')
+
+    body
+        main(role='main')
+            .container-fluid.site-header
+                include parts/main-header
+
+            .container.s-site-body
+                include parts/main-cards
+
+            div#orig-metrics-store
+
+    include layout/scripts
+    script(src='/libs/chart.js/2.7.3/Chart.bundle.min.js')
+    script(src='/scripts/calgloop.js')
+    script(src='/scripts/sample_chart.js')
+    script.
+      const headerHeight = document.getElementById('main-header').clientHeight;
+      const settings = !{settings};
+      for (let i in settings.gadgets) {
+        const item = settings.gadgets[i];
+        const id_str = "card" + item.gadget;
+        const element = document.getElementById(id_str);
+        element.style.top = item.metrics.top + headerHeight + 'px';
+        element.style.left = item.metrics.left + 'px';
+        element.style.height = item.metrics.height + 'px';
+        element.style.width = item.metrics.width + 'px';
+      }

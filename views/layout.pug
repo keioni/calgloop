@@ -1,0 +1,14 @@
+doctype html
+html(lang='ja')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        include layout/styles
+
+        block html_header
+
+    body.text-center
+        main(role='main')
+            block main_content
+
+        include layout/scripts

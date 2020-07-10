@@ -1,0 +1,38 @@
+
+//-.card.card-draggable.resizable.shadow.rounded
+//-    .card-body
+//-        h5.card-title What is this?
+//-        h6.card-subtitle.mb-2.text-muted Card subtitle
+//-        p.card-text Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+//-        a.card-link(href='#') Card link
+//-        a.card-link(href='#') Another link
+//-
+//-.card.card-draggable.resizable.shadow.rounded
+//-    .card-header ガジェットZero
+//-        .float-right
+//-            i.material-icons zoom_in
+//-    .card-body
+//-        h5.card-title Special title treatment
+//-        p.card-text With supporting text below as a natural lead-in to additional content.
+//-        a.btn.btn-secondary(href='#') Go somewhere
+
+- var cardNum = 0
+while cardNum < 1
+    div.card.draggable.resizable.shadow.rounded(id='card'+cardNum)
+        .card-header= 'ガジェット'+cardNum
+            .float-right
+                i.material-icons.zoomable zoom_out_map
+        .card-body
+            blockquote.blockquote.mb-0
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            footer.blockquote-footer Someone famous in
+                cite(title='Source Title') Source Title
+    - cardNum++
+
+#gadget-sensing.card.draggable.resizable.shadow.rounded
+    .card-header= gadget_name
+        .float-right
+            i.material-icons.zoomable zoom_out_map
+    //.card-body
+    //    canvas(id='gadget-sensing-canvas')
+    canvas(id='gadget-sensing-canvas')

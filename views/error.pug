@@ -1,0 +1,9 @@
+extends layout
+
+block html_header
+    title Error - IoT System
+
+block main_content
+  h1= message
+  h2= error.status
+  pre #{error.stack}

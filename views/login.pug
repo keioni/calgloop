@@ -1,0 +1,28 @@
+doctype html
+html(lang='ja')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        include layout/styles
+        title Login - IoT System
+        link(rel='stylesheet', href='styles/login.css')
+
+    body.text-center
+        if error
+            p Error: #{error}
+
+        form.form-signin(method='post' action='/login')
+            img.mb-4(src='https://getbootstrap.com/docs/4.2/assets/brand/bootstrap-solid.svg', alt='', width='72', height='72')
+            h1.h3.mb-3.font-weight-normal IoT System ログイン
+            label.sr-only(for='inputLoginId') ログインID
+            input#inputLoginId.form-control(type='text', name='login_id' placeholder='ログインID', required='', autofocus='')
+            label.sr-only(for='inputPassword') パスワード
+            input#inputPassword.form-control(type='password', name='password' placeholder='パスワード', required='')
+            //-.checkbox.mb-3
+            //-    label
+            //-        input(type='checkbox', value='remember-me')
+            //-        |  ログインしたままにする
+            button.btn.btn-lg.btn-primary.btn-block(type='submit') ログイン
+            p.mt-5.mb-3.text-muted &copy; 2018 Company Name
+
+        include layout/scripts

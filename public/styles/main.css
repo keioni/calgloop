@@ -1,0 +1,105 @@
+
+body {
+    margin: 0;
+    /*width: auto;*/
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+.site-header {
+    height: 3rem;
+    width: auto;
+    padding: .75rem .75rem 1rem 2rem;
+    /* padding: 0px; */
+    color: #fff;
+    background-color: #212529;
+    box-sizing: unset;
+    z-index: 0;
+}
+
+.site-header h1 {
+    font-size: 24pt;
+}
+.site-header .header-buttons {
+    font-size: 12pt;
+}
+
+.s-site-body {
+    height: 4000px;
+}
+
+#clock {
+    margin-right: 1.5rem;
+    margin-top: .25rem;
+    font-size: 16pt;
+}
+
+.card {
+    cursor: default;
+    position: absolute;
+    /*position: relative;*/
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-sizing: border-box;
+    width: 18rem;
+    z-index: 0;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-header {
+    padding: .75rem 1.25rem .25rem 1rem;
+}
+
+#orig-metrics-store {
+    visibility: hidden;
+    position: absolute;
+}
+
+.material-icons {
+    cursor: pointer;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+    margin: 0px -10px -10px 0px;
+}
+
+@media screen and (min-width: 0px) {
+    .container {
+        max-width: none;
+        width: 100%;
+    }
+}
