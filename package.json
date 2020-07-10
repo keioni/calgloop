@@ -20,7 +20,7 @@
   "devDependencies": {
     "bootstrap": "^4.3.1",
     "chart.js": "^2.7.3",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jqueryui": "^1.11.1",
     "popper.js": "^1.14.7"
   }
